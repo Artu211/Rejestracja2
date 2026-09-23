@@ -41,27 +41,27 @@ public class MainActivity extends AppCompatActivity {
                 String emailWartosc = email.getText().toString().trim();
                 String hasloWartosc = pass.getText().toString().trim();
                 if (imieWartosc.isEmpty() || nazwiskoWartosc.isEmpty() || emailWartosc.isEmpty() || hasloWartosc.isEmpty()) {
-                    alert.setText("Błąd: Uzupełnij wszystkie pola!");
+                    alert.setText("Uzupełnij wszystkie pola");
                     return;
                 }
                 if (!emailWartosc.contains("@") || !emailWartosc.contains(".")) {
-                    alert.setText("Błąd: Podaj poprawny adres email!");
+                    alert.setText("Podaj poprawny adres email");
                     return;
                 }
                 if (hasloWartosc.length() < 8) {
-                    alert.setText("Błąd: Hasło musi mieć co najmniej 8 znaków!");
+                    alert.setText("Hasło musi mieć co najmniej 8 znaków");
                     return;
                 }
                 if (!hasloWartosc.matches(".*[a-z].*")) {
-                    alert.setText("Błąd: Hasło musi zawierać co najmniej jedną małą literę!");
+                    alert.setText("Hasło musi zawierać małą literę");
                     return;
                 }
                 if (!hasloWartosc.matches(".*[A-Z].*")) {
-                    alert.setText("Błąd: Hasło musi zawierać co najmniej jedną wielką literę!");
+                    alert.setText("Hasło musi zawierać wielką literę");
                     return;
                 }
                 if (!hasloWartosc.matches(".*[!@#$%^&*()].*")) {
-                    alert.setText("Błąd: Hasło musi zawierać znak specjalny!");
+                    alert.setText("Hasło musi zawierać znak specjalny");
                     return;
                 }
 
